@@ -278,7 +278,7 @@ aph.functions.getPlayerData = function(src, cb)
             playerData.job.name = player.PlayerData.job.name
             playerData.job.label = player.PlayerData.job.label 
             playerData.job.grade = player.PlayerData.job.grade.level 
-            playerData.job.gradeLabel = player.PlayerData.grade.name
+            playerData.job.gradeLabel = player.PlayerData.job.grade.name
             playerData.job.onDuty = player.PlayerData.job.onduty
 
             playerData.faction.name = player.PlayerData.gang.name
