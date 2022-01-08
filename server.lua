@@ -21,12 +21,12 @@ Citizen.CreateThread(function()
         if not MySQL.query and (MySQL.Async.execute and MySQL.Sync.execute) then
             MySQL.query = {
                 await = function(...)
-                    return MySQL.Sync.execute(...)
+                    return MySQL.Sync.fetchAll(...)
                 end
             }
             setmetatable(MySQL.query, {
                 __call = function(_, ...)
-                    return MySQL.Async.execute(...)
+                    return MySQL.Async.fetchAll(...)
                 end
             })
         end
